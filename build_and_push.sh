@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/ash
 REPO=063507218586.dkr.ecr.eu-central-1.amazonaws.com/geth
 
 function build() {
