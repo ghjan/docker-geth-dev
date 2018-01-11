@@ -11,6 +11,7 @@ COPY rungeth.docker /usr/bin/rungeth
 # kept in sync if changes  are ever made
 # Note we are taking advantage of Docker's copy-on-mount feature
 COPY Testchaini_david.json  /root/Testchaini_david.json
+COPY *.sh  /root/
 COPY ethereum /root/.ethereum
 
 ENTRYPOINT ["/usr/bin/rungeth"]
