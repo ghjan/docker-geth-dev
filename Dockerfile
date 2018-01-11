@@ -10,7 +10,7 @@ COPY rungeth.docker /usr/bin/rungeth
 # these two files and directory of geth state belong together and must be
 # kept in sync if changes  are ever made
 # Note we are taking advantage of Docker's copy-on-mount feature
-COPY testchain.json  /root/testchain.json
+COPY Testchaini_david.json  /root/Testchaini_david.json
 COPY ethereum /root/.ethereum
 
 ENTRYPOINT ["/usr/bin/rungeth"]
