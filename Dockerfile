@@ -11,12 +11,11 @@ COPY rungeth.docker /usr/bin/rungeth
 # kept in sync if changes  are ever made
 # Note we are taking advantage of Docker's copy-on-mount feature
 COPY ethereum /root/.ethereum
-COPY private-geth /root/private-geth
 
 # use non-standard ports so don't accidently connect to real servers
 # XXX Docker inheritance doesn't override, it extends the port      list...
 EXPOSE 8545 8546 30303 30303/udp 30304/udp
 EXPOSE 6110
-WORKDIR /root/private-geth/
+WORKDIR /root/.ethereum/
 
 ENTRYPOINT ["/usr/bin/rungeth"]
