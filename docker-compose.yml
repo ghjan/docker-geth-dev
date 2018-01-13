@@ -2,16 +2,16 @@ version: "2"
 services:
      geth1:
        image: cajan2/client-go:alliance
-        volumes:
-            - /data/docker-geth-dev/ethereum:/root/.ethereum/
+       volumes:
+         - /data/docker-geth-dev/ethereum:/root/.ethereum/
        ports:
          - "8545:8545"
          - "30303:30303"
        command: 1
      geth2:
        image: cajan2/client-go:alliance
-        volumes:
-            - /data/docker-geth-dev/ethereum:/root/.ethereum/
+       volumes:
+         - /data/docker-geth-dev/ethereum:/root/.ethereum/
        ports:
          - "8548:8548"
          - "30306:30306"
