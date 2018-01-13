@@ -1,12 +1,12 @@
 #!/bin/ash
 if [[$# -lt 1 ]] || [[ $1 -eq 1]]; then
     if [! -d /root/.ethereum/alliance-geth/data-init1/ ]; then
-        source /root/.ethereum/alliance-geth/init-allicance-node1.sh
-        source /root/.ethereum/alliance-geth/start-alliane-node1.sh
+        source /root/.ethereum/alliance-geth/init-alliance-node1.sh
+        source /root/.ethereum/alliance-geth/start-alliance-node1.sh
     fi
 elif  [$1 -eq 2]; then
     if [! -d /root/.ethereum/alliance-geth/data-init2/ ]; then
-        source /root/.ethereum/alliance-geth/init-allicance-node2.sh
-        source /root/.ethereum/alliance-geth/start-alliane-node2.sh
+        source /root/.ethereum/alliance-geth/init-alliance-node2.sh
+        source /root/.ethereum/alliance-geth/start-alliance-node2.sh
     fi
 fi
