@@ -5,17 +5,11 @@ FROM ethereum/client-go
 
 # script that invokes with all those
 # command line options
-COPY rungeth.docker /usr/bin/rungeth
-
-# these two files and directory of geth state belong together and must be
-# kept in sync if changes  are ever made
-# Note we are taking advantage of Docker's copy-on-mount feature
-COPY ethereum /root/.ethereum
+COPY ethereum/alliance-geth/*.sh /usr/bin/
+COPY rungeth-alliance.docker /usr/bin/rungeth-alliance
 
 # use non-standard ports so don't accidently connect to real servers
 # XXX Docker inheritance doesn't override, it extends the port      list...
-EXPOSE 8545 8546 30303 30303/udp 30304/udp
-EXPOSE 6110
-WORKDIR /root/.ethereum/
+EXPOSE 8545 8546 8548 30303 30303/udp 30306 30306/udp
 
-ENTRYPOINT ["/usr/bin/rungeth"]
+ENTRYPOINT ["/usr/bin/rungeth-alliance"]

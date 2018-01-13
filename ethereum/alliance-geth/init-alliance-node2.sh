@@ -1,0 +1,1 @@
+geth --datadir ./data-init2/  init genesis.json

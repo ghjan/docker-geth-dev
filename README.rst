@@ -19,12 +19,18 @@ and balances. This is inspired by the `StackOverflow thread <http://ethereum.sta
 
 
 3. Run as part of docker-compose: ::
-
-     geth:
-       image: ethereum/client-go:test
+version: "2"
+services:
+     geth1:
+       image: cajan2/client-go:alliance
        ports:
-         - "8110:8110"
-
+         - "30303:30303"
+       command: 1
+     geth2:
+       image: cajan2/client-go:alliance
+       ports:
+         - "30306:30306"
+       command: 2
 
 Precreated accounts
 ===================

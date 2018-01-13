@@ -1,6 +1,0 @@
-#!/bin/ash
-if [ -f /usr/bin/geth ]; then
-    /usr/bin/geth --datadir /root/.ethereum  --port 30303 --rpc --rpcaddr "0.0.0.0" -rpcapi " db,eth,net,web3" --rpcport 8545  --networkid 66666 --dev --lightkdf --nodiscover --maxpeers 0 --verbosity 6 console 2>1.txt
-else
-    ./geth --datadir /root/.ethereum  --port 30303 --rpc --rpcaddr "0.0.0.0" -rpcapi " db,eth,net,web3" --rpcport 8545  --networkid 66666 --dev --lightkdf --nodiscover --maxpeers 0 --verbosity 6 console 2>1.txt
-fi

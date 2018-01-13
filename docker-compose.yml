@@ -1,0 +1,14 @@
+version: "2"
+services:
+     geth1:
+       image: cajan2/client-go:alliance
+       ports:
+         - "8545:8545"
+         - "30303:30303"
+       command: 1
+     geth2:
+       image: cajan2/client-go:alliance
+       ports:
+         - "8548:8548"
+         - "30306:30306"
+       command: 2
